@@ -1,0 +1,45 @@
+.foodMenuContainer {
+  
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menuGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; 
+  margin-bottom: 40px; 
+}
+
+.menuGrid > div {
+  flex: 1 1 calc(25% - 20px); 
+  max-width: calc(25% - 20px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  box-sizing: border-box; /* Ensure padding/margin is included in width calculations */
+}
+
+@media (max-width: 1024px) {
+  .menuGrid > div {
+    flex: 1 1 calc(33.33% - 20px); 
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .menuGrid > div {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .menuGrid > div{
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,100 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+.navbody {
+  padding: 0 5rem;
+  background-color: orange;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: orangered;
+  background-color: white;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.hlinks {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.hlinks ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.hlinks li {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.hlinks li:hover {
+  color: white;
+}
+
+/* Responsive Styles */
+.menuIcon {
+  display: none; /* Hide the hamburger menu icon by default */
+}
+
+@media (max-width: 768px) {
+  .navbody {
+    padding: 0 1.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .menuIcon {
+    display: block; /* Show the hamburger menu icon */
+    cursor: pointer;
+  }
+
+  .hlinks {
+    display: none; /* Hide menu links on mobile */
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    background-color: rgb(200, 141, 30);
+    width: 50%; /* Make the menu take up the full width */
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease;
+    max-height: 0; /* Hide the menu by default */
+    
+  }
+
+  .hlinks.active {
+    display: flex; /* Show menu links when active */
+    max-height: 500px; /* Set max-height to ensure content shows, but does not exceed viewport */
+    /* Enable scrolling within the menu itself */
+  }
+
+  .hlinks ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .hlinks li {
+    
+    text-align: center;
+    
+  }
+}
