@@ -8,3 +8,10 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # DelishBites
 # DelishBites
+# DelishBiyes
+Food delivery website
+Website deployed on Varcel
+Made Using:
+  1. React.js
+  2. Html & CSS
+This website is fully responsive and uses flex-box and grids. It also uses CSS animations for the glowing highlight effect on the webpage. 
